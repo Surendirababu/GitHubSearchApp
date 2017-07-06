@@ -9,13 +9,38 @@ import { GitHubService } from '../services/github.service';
 })
 export class GitHubComponent {
   user :any;
+  repos :any;
+  username : string;
+  defualtUserName ="Surendirababu";
   constructor(private gitHubService : GitHubService){
-      console.log("GitHubComponent initialized..")
-      this.gitHubService.getUser().subscribe(user => 
+  
+  this.gitHubService.getUser(this.defualtUserName).subscribe(user => 
       {
         this.user = user;
-        console.log(this.user.avatar_url);
+      });
+
+       this.gitHubService.getRepos(this.defualtUserName).subscribe(repos => 
+      {
+        this.repos = repos;
+      });
+     
+  }
+
+  search()
+  {
+    console.log("Success"+this.username);
+
+      this.gitHubService.getUser(this.username).subscribe(user => 
+      {
+        this.user = user;
+      });
+
+       this.gitHubService.getRepos(this.username).subscribe(repos => 
+      {
+        this.repos = repos;
       });
   }
   
+
+
 }
