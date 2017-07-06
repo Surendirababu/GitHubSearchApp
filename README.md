@@ -7,4 +7,4 @@ easily.
 
 GIT HUB API https://api.github.com/users/{user} rest endpoint is being used to fetch the Git Hub User details.
 
-![alt text](https://raw.githubusercontent.com/Surendirababu/GitHubSearchApp/tree/master/src/assets/GitHubSearchApp.PNG)
+![alt text](https://github.com/Surendirababu/GitHubSearchApp/tree/master/src/assets/GitHubSearchApp.PNG)
